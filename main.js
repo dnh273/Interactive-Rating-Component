@@ -1,6 +1,5 @@
 //================ RATING CHOOSE ================//
-const btnRating = document.querySelector('btn'),
-    submitRating = document.querySelector('.submit__button'),
+const submitRating = document.querySelector('.submit__button'),
     // // ratingForm = document.querySelector('.ratingForm'),
     button = document.querySelectorAll(".btn"),
     bxRating = document.querySelector('.boxRating'),
@@ -10,11 +9,14 @@ const btnRating = document.querySelector('btn'),
 
 button.forEach((Element) => {
     Element.addEventListener("click", () => {
-        txtRating.innerHTML = `${Element.value}`
+        if (button.style.color = "var(--Light-Grey)") {
+            txtRating.innerHTML = `${Element.value}`
+        }
+        else {
+            txtRating.innerHTML = ''
+        }
     })
 })
-
-
 
 submitRating.addEventListener("click", function clicked() {
     if (txtRating.innerHTML.trim() === '') {
